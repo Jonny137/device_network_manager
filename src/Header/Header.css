@@ -1,0 +1,60 @@
+.header {
+  background-color: #00509f;
+  color: white;
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 2rem 1rem 2rem;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.header form {
+  display: contents;
+}
+
+.header form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-item {
+  display: flex;
+  align-items: center;
+}
+
+.header-item:last-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.header-item button {
+  margin-top: 19px;
+}
+
+.header-item label {
+  margin: 5px;
+}
+
+.header-spacing {
+  margin-right: 10px;
+}
+
+.header-table,
+.header-table tr,
+.header-table td {
+  border: none;
+  background-color: #00509f;
+  margin-top: 1rem;
+}
+
+.header-table span {
+  background-color: #051E66;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+}

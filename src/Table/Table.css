@@ -1,0 +1,58 @@
+.device-table {
+  border-collapse: collapse;
+  width: calc(100vw - 3rem);
+  max-height: 580px;
+  margin: 2rem;
+}
+
+.device-table thead {
+  color: #fff;
+  background-color: #f1592a;
+}
+
+.device-table th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.device-table th:last-of-type {
+  display: none;
+}
+
+.device-table td {
+  width: 150px;
+  vertical-align: initial;
+  height: 35px;
+}
+
+.edit-device-name,
+.edit-ip-address {
+  display: none;
+}
+
+.cell-device-name:hover > .edit-device-name, .cell-ip-address:hover > .edit-ip-address {
+  float: right;
+  display: block;
+}
+
+.cell-delete {
+  max-width: 50px;
+  border: 0;
+}
+
+.cell-delete > button {
+  background-color: #ff5050;
+  margin-left: 1rem;
+}
+
+.connected {
+  color: green;
+}
+
+.disconnected {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
