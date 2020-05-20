@@ -1,68 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Device Network Manager
 
-## Available Scripts
+Application for listing and managing remote devices. It consists of a backend server written in `Flask` and frontend created using `React`. The database is `MongoDB`. Everything was made under `WindowsOS` and using `Powershell` as command line interface.
 
-In the project directory, you can run:
+There are options to **add**, **delete** and **edit** devices. All the devices listed in the table are being periodically pinged and their connection status is written in the STATUS column.
 
-### `npm start`
+Statistics like **number of disconnected devices** and **most diconnected device** with it's *name*, *IP address* and *time disconnected* are shown in the header.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The application was deployed on **Heroku** but, due to restrictions of only two dynos for free use, the application has a *Procfile* that can be used for hosting.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Getting Started
 
-### `npm test`
+It is necessary to indenpendently run backend server and frontend.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Running Flask (Backend Part)
 
-### `npm run build`
+It is recommended to run Flask in a virtual environment. Navigate into `flask_app` folder, open powershell and run following command:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`env\Scripts\activate`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Afterwards install requirements wih command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`pip install -r requirements.txt`
 
-### `npm run eject`
+The next step is to create your own **MongoDB** cluster and generate a URL. Everything regarding this step can be found on 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+https://www.mongodb.com/
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+After you have generated a URL, create a file named ***mongo_db.py*** inside the flask_app folder and in that file assign that URL to a variable called ***MONGO_DB_URL***.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+With that, your linking between backend and database is done.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Since there is a `.flaskenv` config file to start the server, you can simply run the following command in your CLI:
 
-## Learn More
+`flask run`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Notice:** It is recommended to install the **MongoDBCompass** application on your PC for easy preview, testing and modification of both your local databases and the ones which are on your cluster.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Running React (Frontend Part)
 
-### Code Splitting
+To start the frontend part of the application, you need to run the following command inside the root folder (a step backwards if you're in `flask_app` folder):
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+`npm start`
