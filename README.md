@@ -1,4 +1,21 @@
 ## Device Network Manager
+<img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png"
+     alt="Markdown Python icon"
+     height="40px"
+/>&nbsp;&nbsp;
+<img src="https://cdn.onlinewebfonts.com/svg/img_437027.png"
+     alt="Markdown Flask icon"
+     height="40px"
+/>&nbsp;&nbsp;
+<img src="https://www.iconninja.com/files/332/243/605/react-js-react-logo-js-icon.png"
+     alt="Markdown React icon"
+     height="45px"
+/>&nbsp;&nbsp;
+<img src="https://g.foolcdn.com/art/companylogos/mark/MDB.png"
+     alt="Markdown Mongo icon"
+     height="40px"
+/>
+
 
 Application for listing and managing remote devices. It consists of a backend server written in `Flask` and frontend created using `React`. The database is `MongoDB`. Everything was made under `WindowsOS` and using `Powershell` as command line interface.
 
